@@ -15,11 +15,27 @@
                     </h4>
                 </div>
 
+                {{#team}}
+
+                <img class="d-block w-100"  src="{{type.sprites.front_default}}" alt="Pokemon"/>
+                 <img class="d-block w-100"  src="{{type.sprites.back_default}}" alt="Pokemon"/>
+
+
                 <div class="card-body">
-
-                    <span class="badge badge-primary">Team : {{#team}} {{name}} , {{/team}}</span>
-
+                    <span class="badge badge-info">Level : {{level}}</span>
                 </div>
+                <div class="card-body">
+                    <span class="badge badge-primary">Speed : {{type.stats.speed}}</span>
+                    <span class="badge badge-primary">Attack : {{type.stats.attack}}</span>
+                    <span class="badge badge-primary">Defense : {{type.stats.defense}}</span>
+                    <span class="badge badge-primary">HP : {{type.stats.hp}}</span>
+                </div>
+                <div class="card-body">
+                    {{#type.types}}
+                    <span class="badge badge-secondary">{{this}}</span>
+                    {{/type.types}}
+                </div>
+                {{/team}}
 
             </div>
         </div>

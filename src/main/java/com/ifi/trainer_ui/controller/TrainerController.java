@@ -17,7 +17,7 @@ public class TrainerController {
     }
 
     @GetMapping("/trainer-list")
-    public ModelAndView pokedex(){
+    public ModelAndView trainers(){
         var modelAndView = new ModelAndView("trainers");
         var trainers = trainerService.getAllTrainers();
         modelAndView.addObject("trainerList",trainers);
